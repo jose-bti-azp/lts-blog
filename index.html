@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Teva Estrella · Blog d'Astrologia Psicològica</title>
+<meta name="description" content="La Teva Estrella, el blog d'Astrologia Psicològica de la Cristina. Coneix-te a través de la teva carta natal.">
+<meta name="theme-color" content="#18204f">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:site_name" content="La Teva Estrella">
+<meta property="og:title" content="La Teva Estrella · Blog d'Astrologia Psicològica">
+<meta property="og:description" content="Coneix-te a través de la teva carta natal. Un article nou cada dijous.">
+<meta property="og:url" content="https://latevaestrella.cat/">
+<meta property="og:image" content="https://latevaestrella.cat/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://latevaestrella.cat/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#18204f;
+  --night-2:#232c66;
+  --lilac:#c9b8e0;
+  --lilac-soft:#ece4f5;
+  --mustard:#e2b53c;
+  --mustard-soft:#f6e7b4;
+  --cream:#fbf7f0;
+  --sand:#f1e8da;
+  --wood:#b98a5a;
+  --ink:#2f2a38;
+  --muted:#6f6879;
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --sans:'Jost', system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(251,247,240,.86);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,36,64,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:48px;height:48px}
+.hero-logo{position:relative;width:100%;max-width:440px;margin-left:auto;aspect-ratio:1}
+.hero-logo .wheel{position:absolute;inset:0;max-width:none}
+.hero-logo img{position:absolute;inset:13%;width:74%;height:74%;filter:drop-shadow(0 20px 50px rgba(226,181,60,.35))}
+.brand-name{font-family:var(--serif);font-size:1.65rem;font-weight:500;letter-spacing:.01em;color:var(--night)}
+.brand-name em{font-style:italic;color:#8a6fb3}
+nav ul{display:flex;gap:34px;list-style:none;align-items:center}
+nav a{text-decoration:none;font-size:.88rem;letter-spacing:.14em;text-transform:uppercase;color:var(--night);opacity:.8;transition:opacity .2s}
+nav a:hover{opacity:1}
+.ig-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--night);color:#fff !important;opacity:1 !important;letter-spacing:.06em !important;text-transform:none !important;font-size:.88rem}
+.ig-btn svg{width:17px;height:17px}
+.menu-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--night)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 80% -10%, #2c3778 0%, var(--night) 55%, #0f1435 100%);color:#fff}
+.stars{position:absolute;inset:0;pointer-events:none}
+.stars span{position:absolute;border-radius:50%;background:#fff;animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.25}50%{opacity:1}}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;padding:110px 0 120px}
+.eyebrow{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--mustard)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,5.6vw,4.9rem);line-height:1.04;margin:18px 0 24px}
+.hero h1 em{color:var(--lilac)}
+.hero p{font-size:1.12rem;max-width:520px;color:rgba(255,255,255,.78)}
+.hero-cta{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;text-decoration:none;font-size:.95rem;letter-spacing:.04em;transition:transform .2s, box-shadow .2s;border:0;cursor:pointer;font-family:var(--sans)}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--mustard);color:var(--night);font-weight:500;box-shadow:0 10px 30px -10px rgba(226,181,60,.6)}
+.btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+.btn svg{width:18px;height:18px}
+.wheel{width:100%;max-width:420px;margin-left:auto;animation:spin 140s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- section titles ---------- */
+section{padding:110px 0;scroll-margin-top:76px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4vw,3.3rem);line-height:1.1;color:var(--night)}
+.sec-head h2 em{color:#8a6fb3}
+.sec-head p{max-width:420px;color:var(--muted)}
+
+/* ---------- filters ---------- */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.chip{border:1px solid rgba(43,36,64,.18);background:transparent;padding:8px 18px;border-radius:999px;font-family:var(--sans);font-size:.85rem;color:var(--night);cursor:pointer;transition:all .2s}
+.chip.active,.chip:hover{background:var(--night);color:#fff;border-color:var(--night)}
+
+/* ---------- featured ---------- */
+.featured{display:grid;grid-template-columns:1.1fr 1fr;border-radius:28px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -35px rgba(43,36,64,.35);margin-bottom:46px;cursor:pointer;transition:transform .3s}
+.featured:hover{transform:translateY(-4px)}
+.featured .art{min-height:400px}
+.featured .body{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+.featured h3{font-family:var(--serif);font-weight:500;font-size:2.4rem;line-height:1.12;color:var(--night);margin:14px 0 18px}
+.badge{display:inline-block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--mustard-soft);color:#7a5c0e;align-self:flex-start}
+.meta{font-size:.82rem;color:var(--muted);letter-spacing:.04em;margin-top:22px}
+.read-more{margin-top:26px;font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;color:var(--night);font-weight:500;display:inline-flex;gap:10px;align-items:center}
+
+/* ---------- grid ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.card{background:#fff;border-radius:22px;overflow:hidden;cursor:pointer;transition:transform .3s, box-shadow .3s;box-shadow:0 20px 40px -32px rgba(43,36,64,.4);display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(43,36,64,.45)}
+.card .art{height:220px}
+.card .body{padding:28px 28px 30px;display:flex;flex-direction:column;flex:1}
+.card h3{font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.18;color:var(--night);margin:14px 0 12px}
+.card p{color:var(--muted);font-size:.96rem;flex:1}
+.card.hide{display:none}
+.art{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.art svg{width:58%;max-width:230px;height:auto;position:relative}
+.art svg.full{position:absolute;inset:0;width:100%;height:100%;max-width:none}
+
+/* ---------- about ---------- */
+.about{background:var(--sand)}
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:start}
+.about-img{position:sticky;top:110px}
+.about-img .frame{border-radius:200px 200px 26px 26px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(43,36,64,.5);aspect-ratio:4/5}
+.about-img img{width:100%;height:100%;object-fit:cover;object-position:48% 50%}
+.about-img .sig{position:absolute;right:-18px;bottom:40px;background:var(--night);color:#fff;border-radius:18px;padding:18px 22px;font-family:var(--serif);font-size:1.15rem;line-height:1.3;box-shadow:0 20px 40px -20px rgba(0,0,0,.5)}
+.about-img .sig small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mustard);margin-bottom:4px}
+.about-text h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.08;color:var(--night);margin:14px 0 30px}
+.about-text h2 em{color:#8a6fb3}
+.about-text p{margin-bottom:20px;font-size:1.05rem;color:#4a4453}
+.about-text .lead{font-family:var(--serif);font-size:1.55rem;line-height:1.45;color:var(--night);font-style:italic}
+.quote{margin:38px 0;padding:30px 34px;border-left:3px solid var(--mustard);background:rgba(255,255,255,.6);border-radius:0 18px 18px 0;font-family:var(--serif);font-size:1.45rem;line-height:1.45;color:var(--night)}
+.creds{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.creds span{padding:9px 16px;border-radius:999px;background:#fff;font-size:.85rem;color:var(--night);border:1px solid rgba(43,36,64,.08)}
+
+/* ---------- instagram band ---------- */
+.ig-band{background:linear-gradient(135deg,var(--lilac-soft) 0%,#f7eed6 100%);text-align:center;padding:100px 0}
+.ig-band .ring{width:96px;height:96px;margin:0 auto 26px;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,var(--mustard),#d77aa6,#8a6fb3,var(--mustard))}
+.ig-band .ring div{width:100%;height:100%;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center}
+.ig-band .ring svg{width:46px;height:46px}
+.ig-band h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4vw,3.2rem);color:var(--night);line-height:1.1}
+.ig-band .handle{font-size:1.15rem;letter-spacing:.06em;color:#8a6fb3;margin:10px 0 18px}
+.ig-band p{max-width:540px;margin:0 auto 34px;color:var(--muted)}
+.ig-band .btn-gold{background:var(--night);color:#fff;box-shadow:0 14px 30px -14px rgba(43,36,64,.6)}
+
+/* ---------- footer ---------- */
+footer{background:var(--night);color:rgba(255,255,255,.7);padding:60px 0 40px;font-size:.92rem}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+footer .brand-name{color:#fff}
+footer .brand-name em{color:var(--lilac)}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.foot-links{display:flex;gap:26px}
+.copy{margin-top:40px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);font-size:.82rem;text-align:center;color:rgba(255,255,255,.45)}
+
+/* ---------- reader modal ---------- */
+.reader{position:fixed;inset:0;z-index:100;background:rgba(31,26,47,.55);backdrop-filter:blur(6px);display:none;overflow-y:auto;padding:40px 20px}
+.reader.open{display:block}
+.reader article{max-width:760px;margin:0 auto;background:var(--cream);border-radius:28px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.6);animation:up .35s ease}
+@keyframes up{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+.reader .art{height:280px}
+.reader .content{padding:50px 60px 60px}
+.reader h1{font-family:var(--serif);font-weight:500;font-size:2.6rem;line-height:1.1;color:var(--night);margin:16px 0 10px}
+.reader .content p{font-size:1.08rem;margin-bottom:20px;color:#433d4c}
+.reader .content h2{font-family:var(--serif);font-weight:500;font-size:1.7rem;color:var(--night);margin:34px 0 12px}
+.reader .close{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.9);cursor:pointer;font-size:1.3rem;color:var(--night);z-index:2}
+.reader .wrap-art{position:relative}
+.byline{display:flex;align-items:center;gap:12px;margin:4px 0 32px;font-size:.84rem;color:var(--muted);letter-spacing:.03em}
+.byline img{width:38px;height:38px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--cream),0 0 0 3.5px var(--lilac)}
+.firma{margin-top:46px;padding:30px 30px;border-radius:22px;background:var(--lilac-soft);display:flex;gap:26px;align-items:center}
+.avatar-link{display:block;flex:none;line-height:0;transition:transform .25s}
+.avatar-link:hover{transform:scale(1.05)}
+.firma-ring{flex:none;width:112px;height:112px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,var(--mustard),#d77aa6,#8a6fb3,var(--mustard))}
+.firma-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--lilac-soft)}
+.firma-sig{display:block;font-family:var(--serif);font-style:italic;font-size:2rem;line-height:1;color:var(--night);margin-bottom:8px}
+.reader .content .firma p{font-size:.98rem;margin:0 0 16px;color:#4a4453}
+.firma-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.firma-links .btn{padding:10px 18px;background:var(--night);color:#fff;font-size:.88rem}
+.firma-more{font-size:.88rem;letter-spacing:.06em;color:var(--night);text-decoration:none;font-weight:500}
+@media (max-width:560px){.firma{flex-direction:column;text-align:center}.firma-links{justify-content:center}}
+.reader .share{margin-top:40px;padding:26px 28px;border-radius:18px;background:var(--lilac-soft);display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.reader .share .btn{padding:11px 20px;background:var(--night);color:#fff}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr;padding:80px 0 90px}
+  .hero-logo{max-width:320px;margin:0 auto}
+  .featured{grid-template-columns:1fr}
+  .featured .art{min-height:260px}
+  .featured .body{padding:38px 32px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:56px}
+  .about-img{position:relative;top:0;max-width:440px}
+}
+@media (max-width:720px){
+  nav ul{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;padding:26px;gap:22px;border-bottom:1px solid rgba(43,36,64,.08)}
+  nav ul.open{display:flex}
+  .menu-toggle{display:block}
+  .grid{grid-template-columns:1fr}
+  section{padding:80px 0}
+  .reader .content{padding:36px 28px 40px}
+  .reader h1{font-size:2rem}
+  .about-img .sig{right:10px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inici" aria-label="La Teva Estrella">
+      <img src="logo-sm.png" alt="" width="48" height="48">
+      <span class="brand-name">La Teva <em>Estrella</em></span>
+    </a>
+    <button class="menu-toggle" aria-label="Menú" onclick="document.getElementById('menu').classList.toggle('open')">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#sobre-mi">Sobre mi</a></li>
+        <li><a href="#instagram">Comunitat</a></li>
+        <li><a class="ig-btn" href="https://www.instagram.com/latevaestrella_cat/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          @latevaestrella_cat</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inici" style="padding:0">
+  <div class="stars" id="stars"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Astrologia Psicològica · per Cristina</span>
+      <h1>Coneix-te des d'un lloc <em>diferent</em>.</h1>
+      <p>La teva carta natal és com una empremta digital: única i irrepetible. Aquí comparteixo el llenguatge simbòlic de l'astrologia per mirar-te amb més comprensió i viure segons la teva pròpia essència.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#blog">Llegir el blog
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/latevaestrella_cat/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          Segueix-me a Instagram</a>
+      </div>
+    </div>
+    <div class="hero-logo">
+    <svg class="wheel" viewBox="0 0 400 400" aria-hidden="true">
+      <defs>
+        <radialGradient id="core" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e2b53c" stop-opacity=".55"/><stop offset="1" stop-color="#e2b53c" stop-opacity="0"/></radialGradient>
+      </defs>
+      <circle cx="200" cy="200" r="190" fill="none" stroke="rgba(255,255,255,.25)"/>
+      <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(255,255,255,.25)"/>
+      
+      <g id="spokes" stroke="rgba(255,255,255,.18)"></g>
+      <g id="glyphs" fill="#c9b8e0" font-family="serif" font-size="22" text-anchor="middle" dominant-baseline="central"></g>
+      </svg>
+      <img src="logo.webp" alt="La Teva Estrella" width="552" height="560">
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" style="color:#a07c1c">El blog</span>
+        <h2>Darrers <em>articles</em></h2>
+      </div>
+      <p>Reflexions sobre la carta natal, els trànsits i els símbols que ens ajuden a entendre per què som com som.</p>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="chip active" data-f="tots">Tots</button>
+    </div>
+
+    <div id="featured"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="sobre-mi">
+  <div class="wrap about-grid">
+    <div class="about-img">
+      <div class="frame"><img src="sobre-mi.jpg" alt="Un racó de llum: tassa de cafè, flors grogues i lavanda al costat de la finestra"></div>
+      <div class="sig"><small>Autora</small>Cristina</div>
+    </div>
+    <div class="about-text">
+      <span class="eyebrow" style="color:#a07c1c">Sobre mi</span>
+      <h2>Sóc la <em>Cristina</em></h2>
+      <p class="lead">Vaig estudiar la carrera de Pedagogia i Psicologia i anys més tard els estudis d'Astrologia Psicològica.</p>
+      <p>Des de petita m'ha interessat saber per què som com som. Sempre he estat molt observadora i m'ha agradat molt escoltar, perquè quan una persona és observadora i es fixa en els detalls pot aprendre de tot i de tothom.</p>
+      <p>Conèixer-se a un mateix és fonamental per viure segons la pròpia essència i tenir criteri propi.</p>
+      <div class="quote">L'Astrologia Psicològica és un llenguatge simbòlic que et permet conèixer-te des d'un lloc diferent, original i profundament transformador.</div>
+      <p>La lectura de la carta natal va ser un moment profundament revelador. A partir d'aquest moment l'Astrologia em va interessar cada cop més. Vaig anar descobrint un coneixement que em va fascinar i cada cop tenia més ganes de saber-ne més. Això em va portar a estudiar, formar-me, llegir cada cop més, i compartir els meus coneixements.</p>
+      <p>Per mi l'Astrologia Psicològica et permet veure't des d'una mirada més compassiva, a tu mateix/a i als altres, et permet ser tu mateix/a entenent que cada persona és única literalment i la seva carta natal és com una empremta digital, és la seva empremta astral.</p>
+      <p>Pot semblar estrany al principi, ja que no és convencional i no estem acostumats/des a pensar des d'aquest llenguatge, però quan t'endinses en aquest món és fascinant.</p>
+      <div class="creds">
+        <span>✦ Pedagogia</span><span>✦ Psicologia</span><span>✦ Astrologia Psicològica</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="ig-band" id="instagram">
+  <div class="wrap">
+    <div class="ring"><div>
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2b2440" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#2b2440"/></svg>
+    </div></div>
+    <h2>Connectem a Instagram</h2>
+    <div class="handle">@latevaestrella_cat</div>
+    <p>Allà comparteixo cada setmana els trànsits del moment, les llunes noves i plenes i petites reflexions per acompanyar-te en el dia a dia.</p>
+    <a class="btn btn-gold" href="https://www.instagram.com/latevaestrella_cat/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      Segueix La Teva Estrella</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand" style="gap:14px"><img src="logo-sm.png" alt="" width="52" height="52" style="width:52px;height:52px"><span class="brand-name">La Teva <em>Estrella</em></span></span>
+      <div class="foot-links">
+        <a href="#blog">Blog</a>
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="https://www.instagram.com/latevaestrella_cat/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 La Teva Estrella · Cristina · Astrologia Psicològica</div>
+  </div>
+</footer>
+
+<!-- READER -->
+<div class="reader" id="reader" role="dialog" aria-modal="true">
+  <article>
+    <div class="wrap-art">
+      <button class="close" aria-label="Tancar" onclick="closeReader()">✕</button>
+      <div class="art" id="r-art"></div>
+    </div>
+    <div class="content">
+      <span class="badge" id="r-cat"></span>
+      <h1 id="r-title"></h1>
+      <div class="byline"><a class="avatar-link" href="#sobre-mi" onclick="closeReader()" title="Sobre mi"><img src="cristina.jpg" alt="Cristina · Sobre mi"></a><span id="r-meta"></span></div>
+      <div id="r-body"></div>
+      <div class="firma">
+        <a class="firma-ring avatar-link" href="#sobre-mi" onclick="closeReader()" title="Sobre mi"><img src="cristina.jpg" alt="Cristina · Sobre mi"></a>
+        <div class="firma-text">
+          <span class="firma-sig">Cristina</span>
+          <p>Formada en Pedagogia, Psicologia i Astrologia Psicològica. Escric La Teva Estrella per ajudar-te a conèixer-te des d'un lloc diferent.</p>
+          <div class="firma-links">
+            <a class="btn" href="https://www.instagram.com/latevaestrella_cat/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              @latevaestrella_cat</a>
+            <a class="firma-more" href="#sobre-mi" onclick="closeReader()">Sobre mi →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
+<script>
+/* ---- illustrations (inline SVG, no external images) ---- */
+const ILL = {};
+const BG = {};
+
+ILL.natal3 = (()=>{
+  let seed=7; const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+  const W=760,H=280,cx=380,cy=140, R1=104,R2=84,R3=36;
+  const pol=(r,deg)=>{const a=(180+deg)*Math.PI/180;return [cx+r*Math.cos(a),cy-r*Math.sin(a)];}; // 0° = ASC (left), counter-clockwise
+  let o=`<svg class="full" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgN" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#2f3a80"/><stop offset=".55" stop-color="#18204f"/><stop offset="1" stop-color="#0c1030"/></radialGradient>
+    <radialGradient id="sunG" cx="40%" cy="38%" r="65%"><stop offset="0" stop-color="#ffe9a3"/><stop offset=".55" stop-color="#f2b938"/><stop offset="1" stop-color="#d98f12"/></radialGradient>
+    <radialGradient id="sunHalo" r="50%"><stop offset="0" stop-color="#f2b938" stop-opacity=".45"/><stop offset="1" stop-color="#f2b938" stop-opacity="0"/></radialGradient>
+    <linearGradient id="moonG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4f8"/><stop offset="1" stop-color="#a9adbd"/></linearGradient>
+    <radialGradient id="moonHalo" r="50%"><stop offset="0" stop-color="#dfe3f5" stop-opacity=".35"/><stop offset="1" stop-color="#dfe3f5" stop-opacity="0"/></radialGradient>
+    <radialGradient id="core" r="50%"><stop offset="0" stop-color="#e2b53c" stop-opacity=".3"/><stop offset="1" stop-color="#e2b53c" stop-opacity="0"/></radialGradient>
+    <linearGradient id="hz" x1="0" x2="1"><stop offset="0" stop-color="#e2b53c" stop-opacity="0"/><stop offset=".15" stop-color="#e2b53c" stop-opacity=".8"/><stop offset=".85" stop-color="#c9ccd9" stop-opacity=".8"/><stop offset="1" stop-color="#c9ccd9" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#bgN)"/>`;
+  // stars
+  for(let i=0;i<140;i++){const x=rnd()*W,y=rnd()*H,r=rnd()<.9?rnd()*.9+.3:rnd()*1.3+1;o+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}" fill="#fff" opacity="${(.35+rnd()*.6).toFixed(2)}"/>`;}
+  const spark=(x,y,s,c)=>`<path d="M${x} ${y-s} L${x+s*.18} ${y-s*.18} L${x+s} ${y} L${x+s*.18} ${y+s*.18} L${x} ${y+s} L${x-s*.18} ${y+s*.18} L${x-s} ${y} L${x-s*.18} ${y-s*.18}Z" fill="${c}"/>`;
+  [[205,46,9],[560,40,7],[690,232,8],[60,232,6],[300,250,5],[470,26,5],[720,70,5],[30,60,5]].forEach(([x,y,s])=>o+=spark(x,y,s,'#fbecc0'));
+  // horizon line (ASC–DSC)
+  o+=`<line x1="20" y1="${cy}" x2="${W-20}" y2="${cy}" stroke="url(#hz)" stroke-width="1.2"/>`;
+  // wheel
+  o+=`<circle cx="${cx}" cy="${cy}" r="${R1+14}" fill="url(#core)"/>
+  <circle cx="${cx}" cy="${cy}" r="${R1}" fill="#141a45" fill-opacity=".55" stroke="#e2b53c" stroke-opacity=".85" stroke-width="1.4"/>
+  <circle cx="${cx}" cy="${cy}" r="${R2}" fill="none" stroke="#e2b53c" stroke-opacity=".55"/>
+  <circle cx="${cx}" cy="${cy}" r="${R3}" fill="#18204f" stroke="#c9ccd9" stroke-opacity=".5"/>`;
+  for(let d=0;d<360;d+=5){const [x1,y1]=pol(R1,d),[x2,y2]=pol(R1-(d%30?4:9),d);o+=`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="#e2b53c" stroke-opacity=".6" stroke-width=".8"/>`;}
+  const G='♈♉♊♋♌♍♎♏♐♑♒♓';
+  for(let i=0;i<12;i++){const d=i*30+12; // signs offset (ASC at ~18° of a sign)
+    const [a1,b1]=pol(R2,i*30-3),[a2,b2]=pol(R1-9,i*30-3); o+=`<line x1="${a1.toFixed(1)}" y1="${b1.toFixed(1)}" x2="${a2.toFixed(1)}" y2="${b2.toFixed(1)}" stroke="#e2b53c" stroke-opacity=".45"/>`;
+    const [gx,gy]=pol((R1+R2)/2-3,d); o+=`<text x="${gx.toFixed(1)}" y="${gy.toFixed(1)}" font-size="13" fill="#e9d9a8" text-anchor="middle" dominant-baseline="central" font-family="serif">${G[i]}︎</text>`;}
+  // houses
+  for(let i=0;i<12;i++){const d=i*30+(i%3?([0,0,-6,4][i%4]):0);const [x1,y1]=pol(R3,d),[x2,y2]=pol(R2,d);
+    const ax=(i%3===0);o+=`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${ax?'#f2c75a':'#c9ccd9'}" stroke-opacity="${ax?.9:.35}" stroke-width="${ax?1.4:.8}"/>`;
+    const [hx,hy]=pol(R3+9,d+15);o+=`<text x="${hx.toFixed(1)}" y="${hy.toFixed(1)}" font-size="7" fill="#c9ccd9" fill-opacity=".6" text-anchor="middle" dominant-baseline="central" font-family="sans-serif">${i+1}</text>`;}
+  // planets in chart: Sun near ASC (house 12/1), Moon at ~ 245°
+  const sunD=14, moonD=254;
+  const [sx,sy]=pol(R2-16,sunD),[mx,my]=pol(R2-16,moonD),[tx,ty]=pol(R2-16,134);
+  o+=`<line x1="${sx}" y1="${sy}" x2="${mx}" y2="${my}" stroke="#e2b53c" stroke-opacity=".6" stroke-width=".9" stroke-dasharray="3 3"/>`;
+  o+=`<circle cx="${sx}" cy="${sy}" r="8.5" fill="url(#sunG)"/><circle cx="${sx}" cy="${sy}" r="2" fill="#7a4a06"/>`;
+  o+=`<mask id="mS"><circle cx="${mx}" cy="${my}" r="8.5" fill="#fff"/><circle cx="${mx+4.5}" cy="${my-2.5}" r="7.5" fill="#000"/></mask><circle cx="${mx}" cy="${my}" r="8.5" fill="url(#moonG)" mask="url(#mS)"/>`;
+  // ASC marker
+  o+=`<path d="M${cx-R1-2} ${cy} l-10 -6 v12z" fill="#f2c75a"/><text x="${cx-R1-16}" y="${cy-12}" font-size="10" letter-spacing="1.5" fill="#f2c75a" text-anchor="end" font-family="sans-serif">ASCENDENT</text>`;
+  o+=`<text x="${cx+R1+16}" y="${cy-12}" font-size="11" letter-spacing="2" fill="#c9ccd9" fill-opacity=".7" font-family="sans-serif">DSC</text>`;
+  // center star
+  o+=spark(cx,cy,14,'#f2c75a')+`<circle cx="${cx}" cy="${cy}" r="2.4" fill="#18204f"/>`;
+  // big Sun rising at left (on horizon)
+  const SX=104,SY=cy;
+  o+=`<circle cx="${SX}" cy="${SY}" r="92" fill="url(#sunHalo)"/>`;
+  for(let i=0;i<20;i++){const a=i*18*Math.PI/180,r1=40,r2=i%2?58:68,w=i%2?4:6;
+    const x1=SX+r1*Math.cos(a),y1=SY+r1*Math.sin(a),x2=SX+r2*Math.cos(a),y2=SY+r2*Math.sin(a);
+    const nx=-Math.sin(a)*w,ny=Math.cos(a)*w,mx2=(x1+x2)/2+nx*.9,my2=(y1+y2)/2+ny*.9;
+    o+=`<path d="M${(x1+nx).toFixed(1)} ${(y1+ny).toFixed(1)} Q${mx2.toFixed(1)} ${my2.toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)} Q${((x1+x2)/2-nx*.4).toFixed(1)} ${((y1+y2)/2-ny*.4).toFixed(1)} ${(x1-nx).toFixed(1)} ${(y1-ny).toFixed(1)}Z" fill="#f2b938" opacity=".9"/>`;}
+  o+=`<circle cx="${SX}" cy="${SY}" r="38" fill="url(#sunG)"/><circle cx="${SX}" cy="${SY}" r="38" fill="none" stroke="#fff3c4" stroke-opacity=".5"/>`;
+  // big crescent Moon at right
+  const MX=660,MY=cy;
+  o+=`<circle cx="${MX}" cy="${MY}" r="84" fill="url(#moonHalo)"/>
+  <mask id="mB"><circle cx="${MX}" cy="${MY}" r="46" fill="#fff"/><circle cx="${MX+24}" cy="${MY-12}" r="40" fill="#000"/></mask>
+  <circle cx="${MX}" cy="${MY}" r="46" fill="url(#moonG)" mask="url(#mB)"/>
+  <circle cx="${MX-30}" cy="${MY-4}" r="4" fill="#9ea2b4" opacity=".5"/><circle cx="${MX-22}" cy="${MY+24}" r="3" fill="#9ea2b4" opacity=".45"/><circle cx="${MX-36}" cy="${MY+16}" r="2" fill="#9ea2b4" opacity=".4"/><circle cx="${MX-18}" cy="${MY-30}" r="2.4" fill="#9ea2b4" opacity=".4"/>`;
+  // labels
+  const lab=(x,t,c)=>`<text x="${x}" y="${H-26}" font-size="12" letter-spacing="4" fill="${c}" text-anchor="middle" font-family="sans-serif">${t}</text>`;
+  o+=lab(SX,'SOL','#f2c75a')+lab(MX,'LLUNA','#d6d9e6');
+  return o+'</svg>';
+})();
+BG.natal3 = '#18204f';
+ILL.lluna = (()=>{
+  let seed=11; const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+  const W=760,H=280,HZ=192,MX=488,MY=90,R=48;
+  let o=`<svg class="full" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs>
+  <linearGradient id="luSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1236"/><stop offset=".7" stop-color="#26306e"/><stop offset="1" stop-color="#3b3f86"/></linearGradient>
+  <linearGradient id="luSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2560"/><stop offset="1" stop-color="#0a0f2e"/></linearGradient>
+  <radialGradient id="luHalo" r="50%"><stop offset="0" stop-color="#e8ebff" stop-opacity=".42"/><stop offset=".45" stop-color="#c9b8e0" stop-opacity=".14"/><stop offset="1" stop-color="#c9b8e0" stop-opacity="0"/></radialGradient>
+  <radialGradient id="luMoon" cx="40%" cy="38%" r="70%"><stop offset="0" stop-color="#fffdf6"/><stop offset=".7" stop-color="#e9e6f0"/><stop offset="1" stop-color="#bdb9cc"/></radialGradient>
+  <linearGradient id="luRef" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f1fa" stop-opacity=".85"/><stop offset="1" stop-color="#f4f1fa" stop-opacity="0"/></linearGradient>
+  </defs><rect width="${W}" height="${HZ}" fill="url(#luSky)"/><rect y="${HZ}" width="${W}" height="${H-HZ}" fill="url(#luSea)"/>`;
+  for(let i=0;i<120;i++){const x=rnd()*W,y=rnd()*(HZ-14),r=rnd()<.9?rnd()*.8+.3:rnd()*1.2+.9;o+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}" fill="#fff" opacity="${(.3+rnd()*.6).toFixed(2)}"/>`;}
+  const spark=(x,y,s,c)=>`<path d="M${x} ${y-s} L${x+s*.18} ${y-s*.18} L${x+s} ${y} L${x+s*.18} ${y+s*.18} L${x} ${y+s} L${x-s*.18} ${y+s*.18} L${x-s} ${y} L${x-s*.18} ${y-s*.18}Z" fill="${c}"/>`;
+  [[90,40,7],[650,34,8],[720,120,5],[300,30,5],[40,140,5]].forEach(([x,y,s])=>o+=spark(x,y,s,'#fbecc0'));
+  // phases of the moon along an arc, from new to almost full
+  const ph=[0,.25,.5,.75,1,1.35,1.7];
+  ph.forEach((k,i)=>{const x=176+i*35,y=160-Math.sin((i/6)*Math.PI)*44,r=8;
+    o+=`<circle cx="${x}" cy="${y}" r="${r}" fill="#1a2158" stroke="#c9ccd9" stroke-opacity=".45" stroke-width=".8"/>`;
+    if(k>0){const dx=r*2*(k/1.7+.06);o+=`<mask id="luP${i}"><circle cx="${x}" cy="${y}" r="${r}" fill="#fff"/><circle cx="${x-dx}" cy="${y}" r="${r}" fill="#000"/></mask><circle cx="${x}" cy="${y}" r="${r}" fill="#ece8f4" mask="url(#luP${i})"/>`;}
+  });
+  o+=`<path d="M176 160 Q281 72 386 160" fill="none" stroke="#e2b53c" stroke-opacity=".35" stroke-dasharray="2 5"/>`;
+  // full moon with halo and craters
+  o+=`<circle cx="${MX}" cy="${MY}" r="130" fill="url(#luHalo)"/><circle cx="${MX}" cy="${MY}" r="${R}" fill="url(#luMoon)"/>`;
+  [[-16,-12,10,.18],[14,6,7,.16],[-4,22,6,.14],[22,-20,4,.15],[-26,10,4,.12],[6,-30,3,.12],[30,24,3,.1]].forEach(([dx,dy,r,a])=>o+=`<circle cx="${MX+dx}" cy="${MY+dy}" r="${r}" fill="#8d89a3" opacity="${a}"/>`);
+  o+=`<circle cx="${MX}" cy="${MY}" r="${R}" fill="none" stroke="#fff" stroke-opacity=".5"/>`;
+  // horizon glow and reflection
+  o+=`<rect x="0" y="${HZ-1}" width="${W}" height="1.2" fill="#c9b8e0" opacity=".35"/>`;
+  o+=`<ellipse cx="${MX}" cy="${HZ+4}" rx="120" ry="8" fill="#e8ebff" opacity=".16"/>`;
+  for(let i=0;i<16;i++){const y=HZ+6+i*5.2,w=(70-i*3.6)*(0.75+rnd()*.5),x=MX-w/2+(rnd()-.5)*10;o+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${w.toFixed(1)}" height="1.8" rx=".9" fill="#f4f1fa" opacity="${(.75-i*.045).toFixed(2)}"/>`;}
+  for(let i=0;i<22;i++){const y=HZ+8+rnd()*(H-HZ-12),x=rnd()*W,w=10+rnd()*40;if(Math.abs(x-MX)<80)continue;o+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${w.toFixed(1)}" height="1" fill="#c9b8e0" opacity="${(.12+rnd()*.18).toFixed(2)}"/>`;}
+  return o+'</svg>';
+})();
+BG.lluna = '#141a45';
+
+ILL.aigua = (()=>{
+  let seed=23; const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+  const W=760,H=280,HZ=150,C=[246,380,514];
+  let o=`<svg class="full" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs>
+  <linearGradient id="aqSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1a33"/><stop offset="1" stop-color="#1f4a66"/></linearGradient>
+  <linearGradient id="aqSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d5470"/><stop offset="1" stop-color="#0b2236"/></linearGradient>
+  <radialGradient id="aqHalo" r="50%"><stop offset="0" stop-color="#e8f3ff" stop-opacity=".35"/><stop offset="1" stop-color="#e8f3ff" stop-opacity="0"/></radialGradient>
+  <linearGradient id="aqMoon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf6"/><stop offset="1" stop-color="#bfc6d6"/></linearGradient>
+  <radialGradient id="aqWell" r="50%"><stop offset="0" stop-color="#03101c"/><stop offset=".6" stop-color="#0a2a3d"/><stop offset="1" stop-color="#1d5470" stop-opacity="0"/></radialGradient>
+  </defs><rect width="${W}" height="${HZ}" fill="url(#aqSky)"/><rect y="${HZ}" width="${W}" height="${H-HZ}" fill="url(#aqSea)"/>`;
+  for(let i=0;i<110;i++){const x=rnd()*W,y=rnd()*(HZ-10),r=rnd()<.9?rnd()*.8+.3:rnd()*1.1+.9;o+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}" fill="#fff" opacity="${(.3+rnd()*.6).toFixed(2)}"/>`;}
+  o+=`<rect x="0" y="${HZ-1}" width="${W}" height="1.2" fill="#9fd3e0" opacity=".35"/>`;
+  // dividers
+  [313,447].forEach(x=>o+=`<line x1="${x}" y1="28" x2="${x}" y2="${H-28}" stroke="#e2b53c" stroke-opacity=".28" stroke-dasharray="2 6"/>`);
+  const G=['♋','♓','♏'];
+  C.forEach((x,i)=>{const y=74,r=22;
+    o+=`<circle cx="${x}" cy="${y}" r="52" fill="url(#aqHalo)"/><mask id="aqM${i}"><circle cx="${x}" cy="${y}" r="${r}" fill="#fff"/><circle cx="${x+12}" cy="${y-6}" r="${r-3}" fill="#000"/></mask><circle cx="${x}" cy="${y}" r="${r}" fill="url(#aqMoon)" mask="url(#aqM${i})"/>`;
+    o+=`<text x="${x+26}" y="${y+20}" font-size="16" fill="#e9d9a8" text-anchor="middle" dominant-baseline="central" font-family="serif">${G[i]}︎</text>`;
+  });
+  // Cranc: river winding towards the viewer (wide in front, narrow at the horizon)
+  {const x=C[0],B=H-44;
+    const L=`M${x-3} ${HZ} C${x-14} ${HZ+20} ${x+18} ${HZ+40} ${x-6} ${HZ+58} S${x-50} ${B-14} ${x-52} ${B}`;
+    const Rr=`L${x+12} ${B} C${x+4} ${B-18} ${x+34} ${HZ+64} ${x+14} ${HZ+48} S${x+2} ${HZ+16} ${x+3} ${HZ}Z`;
+    o+=`<path d="${L} ${Rr}" fill="#5fb0c8" fill-opacity=".55" stroke="#e2b53c" stroke-opacity=".55" stroke-width="1"/>`;
+    for(let k=0;k<7;k++){const t=k/6,y=HZ+10+t*(B-HZ-18),w=4+t*22,cx=x+[0,6,4,-4,-14,-20,-22][k];o+=`<rect x="${(cx-w/2).toFixed(1)}" y="${y.toFixed(1)}" width="${w.toFixed(1)}" height="1.4" rx=".7" fill="#e8f3ff" opacity="${(.35+t*.4).toFixed(2)}"/>`;}
+    o+=`<path d="M${x-90} ${B+2} q20 -6 40 0 M${x+30} ${B+2} q20 -6 40 0" fill="none" stroke="#9fd3e0" stroke-opacity=".3"/>`;}
+  // Peixos: wide ocean waves
+  {const x=C[1];o+=`<clipPath id="aqClip"><rect x="${x-58}" y="${HZ}" width="116" height="${H-HZ-40}"/></clipPath><g clip-path="url(#aqClip)">`;for(let k=0;k<5;k++){const y=HZ+14+k*16,amp=3.5+k*1.5,len=20+k*5;let d=`M${x-70} ${y}`;for(let j=0;j<10;j++){d+=` q${len/2} ${-amp} ${len} 0`;}
+    o+=`<path d="${d}" fill="none" stroke="${k%2?'#9fd3e0':'#e2b53c'}" stroke-opacity="${(.85-k*.1).toFixed(2)}" stroke-width="${(1.1+k*.25).toFixed(2)}" stroke-linecap="round"/>`;}
+    o+='</g>';}
+  // Escorpí: still well / pond with concentric ripples
+  {const x=C[2],y=HZ+44;o+=`<ellipse cx="${x}" cy="${y}" rx="62" ry="24" fill="url(#aqWell)"/>`;
+    [56,42,29,17,7].forEach((rx,k)=>o+=`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${(rx*.33).toFixed(1)}" fill="none" stroke="${k===0?'#e2b53c':'#9fd3e0'}" stroke-opacity="${(.25+k*.14).toFixed(2)}" stroke-width="${k===0?1.4:1}"/>`);
+    o+=`<circle cx="${x}" cy="${y}" r="2.4" fill="#fbecc0"/>`;}
+  const lab=(x,t,s)=>`<text x="${x}" y="${H-20}" font-size="9.5" letter-spacing="2.5" fill="#e9eef5" text-anchor="middle" font-family="sans-serif">${t}<tspan fill="#e2b53c" fill-opacity=".8"> · ${s}</tspan></text>`;
+  o+=lab(C[0],'CRANC','RIU')+lab(C[1],'PEIXOS','OCEÀ')+lab(C[2],'ESCORPÍ','POU');
+  return o+'</svg>';
+})();
+BG.aigua = '#0b1a33';
+
+
+const POSTS = [
+  {"id": "llunes-aigua", "ill": "aigua", "cat": "Signes", "date": "19 de novembre de 2026", "iso": "2026-11-19", "min": 2, "title": "Llunes d’aigua: Cranc, Peixos i Escorpí", "excerpt": "Els tres signes d’aigua són Cranc, Peixos i Escorpí. Podem imaginar l’aigua de la Lluna a Cranc com un riu, la de la Lluna a Peixos com un immens oceà i la de la Lluna a Escorpí con un pantà o un pou.", "body": "<p>Els tres signes d’aigua són Cranc, Peixos i Escorpí.</p><p>Podem imaginar l’aigua de la Lluna a Cranc com un riu, la de la Lluna a Peixos com un immens oceà i la de la Lluna a Escorpí con un pantà o un pou.</p><p>La Lluna a Cranc és aigua cardinal. Una persona amb la Lluna a Cranc tindrà un món emocional sensible, maternal, profund, protector, nostàlgic.</p><p>Les emocions d’aquesta lluna, com un riu, flueixen i volen trobar un lloc segur, volen sentir-se a casa. El riu té vores que volen contenció igual que aquesta lluna, que necessita trobar refugi en els seus vincles propers i en la seva família. Per aquesta lluna la cura de la seva família és una prioritat emocional profunda.</p><p>L'ombra de la lluna a Cranc serà la dependència, la susceptibilitat i l’excés d’aferrament al passat.</p><p>La Lluna a Peixos és aigua mutable, és un immens oceà. L’oceà és enorme com l’empatia d’aquesta lluna. Pot sentir una gran connexió espiritual, té una gran compassió pels altres i una gran imaginació. És somiadora, comprensiva, adaptable. Aquí les emocions com les marees, pugen i baixen i amb aquesta lluna es poden absorbir fàcilment les emocions i estats d’ànim dels altres.</p><p>L’ombra de la lluna a Peixos serà l’evasió de la realitat, la confusió i la dificultat per posar límits.</p><p>La Lluna a Escorpí és aigua fixa. Un persona amb la Lluna a Escorpí tindrà un món emocional intens. L’aigua de la Lluna a Escorpí és com un pantà o com un pou, està quieta, estancada i és molt profunda, així seran les emocions d’aquesta lluna.</p><p>Un pantà o un pou retenen l’aigua, així aquesta lluna acumula les experiències emocionals amb una gran força i profunditat, de manera que en la superfície, en aparença, la persona sembla tranquil·la i serena però sota aquesta superfície, en el seu món emocional hi haurà una gran intensitat, això també farà que tingui una gran capacitat de processar les experiències doloroses i de renèixer amb més força, és a dir que atorga una gran resiliència i poder personal.</p><p>L’ombra de la lluna a Escorpí serà el ressentiment, la gelosia i la necessitat de control.</p><p>Veiem doncs com les tres Llunes en signes d’aigua tot i que comparteixen una connexió profunda amb les emocions i l'inconscient, una gran sensibilitat, intuïció i empatia, són molt diferents entre elles.</p>"},
+  {"id": "lluna-mon-emocional", "ill": "lluna", "cat": "Planetes", "date": "12 de novembre de 2026", "iso": "2026-11-12", "min": 1, "title": "La Lluna i el nostre món emocional", "excerpt": "La Lluna representa el nostre món emocional i els nostres aferraments. És allò que necessitem per sentir-nos segurs/es de manera inconscient.", "body": "<p>La Lluna representa el nostre món emocional i els nostres aferraments. És allò que necessitem per sentir-nos segurs/es de manera inconscient.</p><p>També és la mare que tots/es portem a dins i la percepció que tenim de la nostra pròpia mare o dels cuidadors/es que vàrem tenir. És el nostre refugi emocional, ja que ens parla del que necessitem per sentir-nos protegits/des i segurs/es.</p><p>Cada persona té una manera diferent de sentir-se segura i protegida.</p><p>Per exemple una persona que tingui la Lluna a Cranc, quan hi hagi quelcom que la faci sentir malament buscarà refugi estant a casa seva, tranquila, estant amb la seva família més íntima, estant en calma.</p><p>En canvi, una persona amb la Lluna a Bessons buscarà processar el que li passa a través de la ment i la paraula, verbalitzar les seves emocions, ordenar les seves idees mentre parla, parlar amb diferents persones, distreure's.</p><p>Són dues maneres molt diferents de sentir refugi o protecció emocional.</p><p>En aquest exemple només hem tingut en compte el Signe de la Lluna, però cal mirar moltes més coses, caldrà veure en quina Casa es troba, quins aspectes té etc. Per tant, serà una combinació de moltes coses.</p><p>Com s’ha esmentat abans, la Lluna també representa la percepció que tenim de la nostra mare o cuidadors/es, i és important dir que és la percepció, és a dir, no ens diu com és la nostra mare sinó com nosaltres vam sentir-la, el filtre emocional a través del qual la vam viure. Per això els germans o germanes tenint la mateixa mare poden tenir Llunes diferents.</p><p>A través de saber on tenim la Lluna a la nostra carta natal, podrem fer conscient el nostre món emocional inconscient i entendre millor perquè sentim el que sentim i com tenir cura de nosaltres mateixos.</p>"},
+  {"id": "sol-lluna-ascendent", "ill": "natal3", "cat": "Carta natal", "date": "5 de novembre de 2026", "iso": "2026-11-05", "min": 2, "title": "Sol, Lluna i Ascendent, els tres pilars d’una carta natal", "excerpt": "La carta natal o carta astral és com una fotografia del cel en el moment exacte del nostre naixement. Els tres pilars bàsics de la carta natal són el Sol, la Lluna i l’Ascendent.", "body": "<p>La carta natal o carta astral és com una fotografia del cel en el moment exacte del nostre naixement.</p><p>Els tres pilars bàsics de la carta natal són el Sol, la Lluna i l’Ascendent.</p><p>El Sol representa la nostra essència, és la part de nosaltres que vol ser vista i reconeguda.</p><p>La Lluna representa el nostre món emocional, el que necessitem per sentir-nos segurs/es de manera inconscient.</p><p>L’Ascendent representa la primera impressió que donem als altres, la imatge que projectem, com iniciem les coses i el filtre amb el que veiem i experimentem la realitat.</p><p>De vegades podem no sentir-nos identificats/des amb el nostre Sol i això pot ser per molts motius. Pot ser perquè hi hagi altres parts de la nostra carta natal amb les que ens sentim més identificats/es. Per exemple, una persona pot tenir el Sol a Sagitari però la LLuna a Verge, així el seu Sol voldrà expansió, aventura, obrir horitzons nous, però la seva Lluna necessita ordre, rutines, calma, sentir-se útil, estarà orientada al detall i a la vida quotidiana. Aquí doncs hi haurà una contradicció entre ambdós. És un exemple molt senzill però és per fer-ho entenedor.</p><p>No es tracta d’escollir sino d’integrar les diferències, de fer espai dins nostre a les contradiccions, d’acceptar-les, de convertir-les en possibilitats. La complexitat és quelcom enriquidor, no ha de ser vist com un problema.</p><p>De fet, la carta natal, com l’ésser humà, és ple de contradiccions, d’aprenentatges a fer i de coses a descobrir en el camí de vida. En conèixer les nostres contradiccions i en trobar l’equilibri dels oposats està per mi la clau.</p><p>D’altra banda, l’Ascendent representa la imatge que projectem, però no entesa com a imatge superficial, sino realment com allò que també som, i que de fet hem d’aprendre a ser i integrar per funcionar bé a la realitat, per iniciar les coses a la nostra vida.</p><p>L’Ascendent és com vam iniciar la vida literalment, és a dir, com vam néixer.</p><p>Una cosa que crec que és molt important és saber que la carta natal no és mai una sentència, ni una definició tancada de com és una persona, sinó que ofereix un coneixement sobre les tendències psicològiques d’una persona (en el cas de l'Astrologia Psicològica).</p><p>És una eina molt valuosa d’autoconeixement, sempre entès com una porta oberta a l’evolució, a l’aprenentatge, mai com quelcom tancat.</p><p>Una persona amb aquesta informació pot fer que el vulgui fer, perquè la llibertat de cadascú és indiscutible i és el major tresor d’una persona.</p><p>La carta natal sempre ha d’oferir possibilitats, ha d’oferir algunes respostes però sobretot obrir preguntes, i ha de servir per tenir una major consciència d’un mateix/a, ha de ser una eina d’empoderament, perquè no hem d'oblidar mai que el poder està a dins nostre, no a fora, i que el camí l’hem de fer nosaltres.</p><p>Podríem dir que la carta natal o carta astral és un mapa simbòlic i dinàmic ple de potencialitats, de reptes i de possibilitats.</p>"},
+];
+
+// Articles: el més recent primer. Cada article: id (per a l'enllaç #id), ill (portada), cat, date, iso, min, title, excerpt, body.
+POSTS.sort((a,b) => b.iso.localeCompare(a.iso));
+const VISIBLE = () => POSTS;
+// Categories (filtres i etiquetes): amagades fins que hi hagi prou articles. Posa-ho a true per tornar-les a mostrar.
+const SHOW_CATS = false;
+const arrow = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const art = p => `<div class="art" style="background:${BG[p.ill]}">${ILL[p.ill]}</div>`;
+
+function render(){
+  const cats = [...new Set(POSTS.map(p => p.cat))];
+  document.getElementById('filters').innerHTML = '<button class="chip active" data-f="tots">Tots</button>' + cats.map(c => `<button class="chip" data-f="${c}">${c}</button>`).join('');
+  document.getElementById('filters').style.display = (SHOW_CATS && cats.length > 1) ? '' : 'none';
+  const rest = VISIBLE();
+  document.getElementById('featured').innerHTML = '';
+  document.getElementById('grid').innerHTML = rest.map(p=>`
+    <div class="card card-item" data-cat="${p.cat}" onclick="openReader('${p.id}')">
+      ${art(p)}
+      <div class="body">
+        ${SHOW_CATS ? `<span class="badge">${p.cat}</span>` : ''}
+        <h3>${p.title}</h3>
+        <p>${p.excerpt}</p>
+        <div class="meta">${p.date} · ${p.min} min</div>
+      </div>
+    </div>`).join('');
+}
+render();
+
+document.getElementById('filters').addEventListener('click', e=>{
+  const b = e.target.closest('.chip'); if(!b) return;
+  document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active', c===b));
+  const f = b.dataset.f;
+  document.querySelectorAll('.card-item').forEach(c=>{
+    c.style.display = (f==='tots' || c.dataset.cat===f) ? '' : 'none';
+  });
+});
+
+function openReader(id, fromHash){
+  const p = VISIBLE().find(x=>x.id===id); if(!p) return;
+  document.getElementById('r-art').outerHTML = `<div class="art" id="r-art" style="background:${BG[p.ill]}">${ILL[p.ill]}</div>`;
+  document.getElementById('r-cat').textContent = p.cat;
+  document.getElementById('r-cat').style.display = SHOW_CATS ? '' : 'none';
+  document.getElementById('r-title').textContent = p.title;
+  document.getElementById('r-meta').textContent = `Per Cristina · ${p.date} · ${p.min} min de lectura`;
+  document.getElementById('r-body').innerHTML = p.body;
+  const r = document.getElementById('reader'); r.classList.add('open'); r.scrollTop = 0;
+  document.body.style.overflow='hidden';
+  if(!fromHash && location.hash!=='#'+id) history.replaceState(null,'','#'+id);
+}
+function closeReader(){
+  document.getElementById('reader').classList.remove('open');
+  document.body.style.overflow='';
+  if(POSTS.some(p=>'#'+p.id===location.hash)) history.replaceState(null,'','#blog');
+}
+document.getElementById('reader').addEventListener('click', e=>{ if(e.target.id==='reader') closeReader(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeReader(); });
+function fromHash(){ const id = location.hash.slice(1); if(POSTS.some(p=>p.id===id)) openReader(id,true); }
+window.addEventListener('hashchange', fromHash); fromHash();
+
+/* stars */
+const s = document.getElementById('stars');
+for(let i=0;i<90;i++){
+  const d=document.createElement('span'); const z=Math.random()*2.2+.6;
+  d.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${z}px;height:${z}px;animation-delay:${Math.random()*4}s`;
+  s.appendChild(d);
+}
+/* zodiac wheel */
+const G='♈♉♊♋♌♍♎♏♐♑♒♓'.split(''); let sp='', gl='';
+G.forEach((g,i)=>{
+  const a=(i*30-90)*Math.PI/180, am=((i*30+15)-90)*Math.PI/180;
+  sp+=`<line x1="${200+150*Math.cos(a)}" y1="${200+150*Math.sin(a)}" x2="${200+190*Math.cos(a)}" y2="${200+190*Math.sin(a)}"/>`;
+  gl+=`<text x="${200+170*Math.cos(am)}" y="${200+170*Math.sin(am)}">${g}︎</text>`;
+});
+document.getElementById('spokes').innerHTML=sp; document.getElementById('glyphs').innerHTML=gl;
+</script>
+</body>
+</html>
